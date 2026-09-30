@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<title>Shyam Polymers Brochure</title>
+<!-- Source for downloads/shyam-polymers-brochure.pdf. SAMPLE CONTENT: see README before sharing. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Marcellus&display=swap">
+<style>
+  :root {
+    --ink: #0f1311; --paper: #f4f5f1; --paper-2: #eaece6; --fg: #151917; --muted: #59615b; --line: #d9ddd5;
+    --havana: #8a4b12; --amber: #dba55b; --honey: #f3d19a; --on-dark: #eef0ec; --on-dark-muted: #a5ada6;
+    --font-mark: "Marcellus", Georgia, serif;
+    --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+    --font-body: "Hanken Grotesk", "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", Consolas, monospace;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #999; }
+  body { font-family: var(--font-body); color: var(--fg); font-size: 10pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; margin: 0 auto 8mm; background: var(--paper); position: relative; overflow: hidden; padding: 18mm 17mm 16mm; display: flex; flex-direction: column; gap: 7mm; page-break-after: always; break-after: page; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  @media print { html, body { background: none; } .page { margin: 0; } }
+  h1, h2, h3 { font-family: var(--font-display); margin: 0; line-height: 1.1; letter-spacing: -0.015em; text-wrap: balance; }
+  h2 { font-size: 22pt; font-weight: 700; }
+  h3 { font-size: 12pt; font-weight: 600; }
+  p { margin: 0; }
+  .kicker { font-family: var(--font-mono); font-size: 7.5pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--havana); margin-bottom: 3mm; }
+  .muted { color: var(--muted); }
+  .small { font-size: 8.5pt; color: var(--muted); }
+  .mono { font-family: var(--font-mono); font-size: 8pt; color: var(--muted); }
+  .foot { margin-top: auto; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 7.5pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 3mm; }
+
+  /* Cover */
+  .cover { background: var(--ink); color: var(--on-dark); padding: 0; gap: 0; }
+  .cover .band { display: block; width: 100%; height: 9mm; }
+  .cover-body { padding: 20mm 17mm 0; display: flex; flex-direction: column; gap: 8mm; flex: 1; }
+  .mark { font-family: var(--font-mark); font-size: 40pt; color: var(--honey); letter-spacing: 0.01em; line-height: 1; }
+  .cover h1 { font-size: 30pt; font-weight: 600; max-width: 15ch; }
+  .cover .lede { color: var(--on-dark-muted); font-size: 11.5pt; max-width: 52ch; }
+  .cover .field { display: block; width: 100%; height: 105mm; border-radius: 3mm; }
+  .cover-facts { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(238,240,236,0.15); }
+  .cover-facts div { padding: 4mm 3mm 0 0; }
+  .cover-facts b { display: block; font-family: var(--font-display); font-size: 18pt; color: var(--honey); font-weight: 600; line-height: 1.1; }
+  .cover-facts span { font-size: 8pt; color: var(--on-dark-muted); }
+  .cover .foot { color: var(--on-dark-muted); border-top-color: rgba(238,240,236,0.15); margin: auto 17mm 14mm; }
+
+  /* Colour range */
+  .ticks { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5mm 8mm; }
+  .ticks li { position: relative; padding-left: 5mm; }
+  .ticks li::before { content: ""; position: absolute; left: 0; top: 1.6mm; width: 2.6mm; height: 1.8mm; border-radius: 50%; background: var(--havana); transform: rotate(-18deg); }
+  .family { display: grid; gap: 2.5mm; }
+  .family-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.5px solid var(--fg); padding-bottom: 1.5mm; }
+  .swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2.5mm; }
+  .swatch { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 2mm; overflow: hidden; }
+  .swatch canvas { display: block; width: 100%; height: 19mm; }
+  .swatch figcaption { padding: 1.4mm 2mm 1.8mm; font-size: 7.5pt; line-height: 1.3; }
+  .swatch figcaption b { display: block; font-family: var(--font-mono); font-weight: 500; font-size: 6.8pt; color: var(--muted); }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+  th { text-align: left; font-family: var(--font-mono); font-size: 7pt; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 0 3mm 2mm 0; border-bottom: 1.5px solid var(--fg); }
+  td { padding: 2mm 3mm 2mm 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.m { font-family: var(--font-mono); font-size: 8pt; color: var(--muted); white-space: nowrap; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+  .cols > div { display: grid; gap: 3mm; align-content: start; }
+  .box { background: #fff; border: 1px solid var(--line); border-radius: 2.5mm; padding: 5mm; display: grid; gap: 3mm; align-content: start; }
+  .box-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .box-head h3 { font-size: 15pt; }
+
+  /* Company */
+  .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 2mm; }
+  .timeline li { display: grid; grid-template-columns: 16mm 1fr; gap: 3mm; }
+  .timeline b { font-family: var(--font-mono); font-weight: 500; font-size: 8.5pt; color: var(--havana); }
+  .certs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+  .cert { background: #fff; border: 1px solid var(--line); border-radius: 2mm; padding: 3mm; font-size: 8pt; color: var(--muted); display: grid; gap: 1mm; }
+  .cert b { font-family: var(--font-display); font-size: 11pt; color: var(--fg); }
+  .sites { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 8mm; }
+  .sites div { border-top: 1px solid var(--line); padding-top: 2mm; }
+  .contact { background: var(--ink); color: var(--on-dark); border-radius: 3mm; padding: 7mm; display: grid; grid-template-columns: 1.2fr 1fr; gap: 6mm; }
+  .contact .mark { font-size: 22pt; }
+  .contact dl { margin: 0; display: grid; gap: 2mm; font-size: 9pt; }
+  .contact dt { font-family: var(--font-mono); font-size: 7pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); }
+  .contact dd { margin: 0 0 1mm; }
+</style>
+</head>
+<body>
+
+<!-- Page 1: cover -->
+<section class="page cover">
+  <canvas class="havana-band band"></canvas>
+  <div class="cover-body">
+    <div class="mark">Shyam Polymers</div>
+    <h1>Cellulose acetate granules for eyewear</h1>
+    <p class="lede">Plant-based acetate compounds for injection-moulded spectacle and sunglass frames, in solid, crystal, tortoise and pearl colours. Nylon 6 and PBT granules for engineering parts.</p>
+    <canvas class="granule-field field"></canvas>
+    <div class="cover-facts">
+      <div><b>50+</b><span>years in plastics</span></div>
+      <div><b>100 t</b><span>acetate capacity a year</span></div>
+      <div><b>250+</b><span>people, four sites</span></div>
+      <div><b>120+</b><span>coded colours</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Vadodara, Gujarat · Since the 1970s</span><span>shyampolymers.net</span></div>
+</section>
+
+<!-- Page 2: acetate and colours -->
+<section class="page">
+  <div>
+    <p class="kicker">Acetate for eyewear</p>
+    <h2>Granules that mould into frames people want to wear</h2>
+  </div>
+  <p style="max-width: 150mm">Our cellulose acetate compounds are made for injection moulding of spectacle fronts, temples and sunglass frames. Every batch is colour-checked against its master, dried, bagged and labelled with a traceable batch number. We hold stock in Gujarat, match colours to your sample and send trial quantities free.</p>
+  <ul class="ticks">
+    <li>Phthalate-free plasticisers</li>
+    <li>Consistent melt flow from batch to batch</li>
+    <li>Polishes to a deep gloss after moulding</li>
+    <li>25 kg moisture-barrier bags</li>
+  </ul>
+  <div id="families" style="display: grid; gap: 5mm;"></div>
+  <p class="small">Printed and on-screen colours are a guide. Ask for physical chips and moulded plaques. Custom colours matched to your sample in 7 to 10 working days.</p>
+  <div class="foot"><span>Shyam Polymers · Colour range</span><span>2</span></div>
+</section>
+
+<!-- Page 3: technical -->
+<section class="page">
+  <div>
+    <p class="kicker">Technical</p>
+    <h2>Typical properties and moulding guide</h2>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>Acetate granules, typical values</h3>
+      <table>
+        <thead><tr><th>Property</th><th>Method</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Density</td><td class="m">ISO 1183</td><td>1.27 to 1.30 g/cm³</td></tr>
+          <tr><td>Melt flow rate</td><td class="m">ISO 1133</td><td>8 to 18 g/10 min</td></tr>
+          <tr><td>Tensile strength</td><td class="m">ISO 527</td><td>35 to 50 MPa</td></tr>
+          <tr><td>Hardness</td><td class="m">Rockwell R</td><td>90 to 110</td></tr>
+          <tr><td>Vicat softening point</td><td class="m">ISO 306</td><td>85 to 105 °C</td></tr>
+          <tr><td>Moisture as supplied</td><td class="m">Karl Fischer</td><td>≤ 0.2 %</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Values vary by grade. A full technical data sheet comes with every grade.</p>
+    </div>
+    <div>
+      <h3>Moulding guide</h3>
+      <table>
+        <tbody>
+          <tr><td>Drying</td><td>70 to 80 °C for 2 to 4 hours</td></tr>
+          <tr><td>Melt temperature</td><td>180 to 220 °C</td></tr>
+          <tr><td>Mould temperature</td><td>40 to 70 °C</td></tr>
+          <tr><td>Injection speed</td><td>Medium to fast, to avoid flow lines</td></tr>
+          <tr><td>Regrind</td><td>Up to 20 % clean regrind of the same colour</td></tr>
+          <tr><td>Packing</td><td>25 kg moisture-barrier bags, 1 t per pallet</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Our technical team can help set up drying and moulding at your plant.</p>
+    </div>
+  </div>
+  <div>
+    <p class="kicker">Engineering polymers</p>
+    <h2 style="font-size: 18pt">Nylon 6 and PBT granules</h2>
+  </div>
+  <div class="cols">
+    <div class="box">
+      <div class="box-head"><h3>Nylon 6</h3><span class="mono">50 t a year</span></div>
+      <table><tbody>
+        <tr><td>Natural, unfilled</td><td class="m">SP-N600</td></tr>
+        <tr><td>Black, unfilled</td><td class="m">SP-N601</td></tr>
+        <tr><td>15 % glass-filled</td><td class="m">SP-N615G</td></tr>
+        <tr><td>30 % glass-filled</td><td class="m">SP-N630G</td></tr>
+        <tr><td>Impact-modified</td><td class="m">SP-N6IM</td></tr>
+      </tbody></table>
+      <p class="small">Switch housings, cable ties, gears, bushes, automotive clips.</p>
+    </div>
+    <div class="box">
+      <div class="box-head"><h3>PBT</h3><span class="mono">30 t a year</span></div>
+      <table><tbody>
+        <tr><td>Natural, unfilled</td><td class="m">SP-B100</td></tr>
+        <tr><td>30 % glass-filled</td><td class="m">SP-B130G</td></tr>
+        <tr><td>Flame-retardant</td><td class="m">SP-B1FR</td></tr>
+      </tbody></table>
+      <p class="small">Connectors, relay and coil parts, lamp holders, automotive sensors.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Shyam Polymers · Technical</span><span>3</span></div>
+</section>
+
+<!-- Page 4: company, quality, contact -->
+<section class="page">
+  <div>
+    <p class="kicker">Company</p>
+    <h2>A Vadodara family business, now in its second generation</h2>
+  </div>
+  <div class="cols">
+    <div>
+      <p>Our founder came to Vadodara as a young man and started in the plastics trade. The business grew into compounding, and then into acetate for the eyewear industry. Today it is run by his son, with the rule the founder started with: every bag that leaves the plant should match the last one.</p>
+      <div class="sites">
+        <div><h3>Head office and colour lab</h3><p class="small">Ajwa Road, Vadodara</p></div>
+        <div><h3>Halol plant</h3><p class="small">Acetate compounding</p></div>
+        <div><h3>Waghodia plant</h3><p class="small">Nylon 6 and PBT</p></div>
+        <div><h3>Savli unit</h3><p class="small">Regrind and warehousing</p></div>
+      </div>
+    </div>
+    <ol class="timeline">
+      <li><b>1970s</b><span>Founder settles in Vadodara and starts trading plastics.</span></li>
+      <li><b>1980s</b><span>First compounding line. Acetate for combs and hair accessories.</span></li>
+      <li><b>1990s</b><span>Eyewear-grade acetate. Frame makers become our main customers.</span></li>
+      <li><b>2003</b><span>Shyam Polymers registered. Nylon 6 and PBT added.</span></li>
+      <li><b>2010s</b><span>Halol plant opens. Acetate capacity reaches 100 tonnes a year.</span></li>
+      <li><b>Today</b><span>Colour lab, phthalate-free range, second generation at the helm.</span></li>
+    </ol>
+  </div>
+  <div>
+    <p class="kicker">Quality and sustainability</p>
+    <div class="certs">
+      <div class="cert"><b>ISO 9001</b>Quality management, 2015 standard</div>
+      <div class="cert"><b>REACH</b>Compliant, SVHC-screened raw materials</div>
+      <div class="cert"><b>RoHS</b>Compliant for restricted substances</div>
+      <div class="cert"><b>Phthalate-free</b>Test report for every acetate grade</div>
+    </div>
+  </div>
+  <div class="cols">
+    <div><h3>Made from plants</h3><p class="muted">Cellulose acetate comes from wood pulp and cotton, not crude oil. Our compounds are tested for biodegradation under ISO 14855 composting conditions.</p></div>
+    <div><h3>Scrap taken back</h3><p class="muted">Frame makers can return clean sprues and runners. We regrind them and put them back into use instead of sending them to landfill.</p></div>
+  </div>
+  <div class="contact">
+    <div>
+      <div class="mark">Shyam Polymers</div>
+      <p style="margin-top: 3mm; color: var(--on-dark-muted)">Free samples, colour matching and technical data sheets on request. We usually reply within one working day.</p>
+    </div>
+    <dl>
+      <div><dt>Email</dt><dd>sales@shyampolymers.net</dd></div>
+      <div><dt>Phone</dt><dd>+91 265 XXX XXXX</dd></div>
+      <div><dt>Head office</dt><dd>Ajwa Road, Vadodara, Gujarat 390019</dd></div>
+      <div><dt>Web</dt><dd>shyampolymers.net</dd></div>
+    </dl>
+  </div>
+  <div class="foot"><span>Shyam Polymers · Company</span><span>4</span></div>
+</section>
+
+<script>
+  // Colour families, same codes as the website.
+  var FAMILIES = [
+    ["Solids", "solid", "SP-A100", [["SP-A101","Jet Black","#15171a"],["SP-A104","Ivory","#ece3cf"],["SP-A112","Navy","#1f2b4a"],["SP-A118","Bottle Green","#1f4a36"],["SP-A125","Burgundy","#6a1f2b"],["SP-A130","Stone Grey","#8d8f8a"]]],
+    ["Crystal", "crystal", "SP-A200", [["SP-A201","Clear Crystal","#e9eef0"],["SP-A207","Smoke","#6d6a66"],["SP-A212","Champagne","#e4c893"],["SP-A218","Rose","#e7aeb0"],["SP-A224","Olive Crystal","#9aa36a"],["SP-A230","Blue Crystal","#8fb3d6"]]],
+    ["Tortoise", "tortoise", "SP-A300", [["SP-A301","Classic Havana","#c98a3e","#3e1c09"],["SP-A305","Dark Havana","#7a4318","#1e0d04"],["SP-A309","Blonde Tortoise","#e2bd7c","#8a5220"],["SP-A314","Amber Tortoise","#d8952f","#5a2a0c"],["SP-A318","Green Havana","#6f7a4a","#23260f"],["SP-A322","Grey Tortoise","#9b968c","#2e2b27"]]],
+    ["Pearl", "pearl", "SP-A400", [["SP-A401","Pearl White","#efe9df"],["SP-A405","Gold Pearl","#c9a660"],["SP-A409","Silver Pearl","#b9bcc0"],["SP-A413","Rose Gold","#8f5a4a"],["SP-A417","Gunmetal","#3d4a5c"],["SP-A421","Plum Pearl","#5a3e6b"]]]
+  ];
+  document.getElementById("families").innerHTML = FAMILIES.map(function (f) {
+    return '<div class="family"><div class="family-head"><h3>' + f[0] + '</h3><span class="mono">' + f[2] + ' series</span></div><div class="swatches">' +
+      f[3].map(function (c) {
+        return '<figure class="swatch"><canvas data-kind="' + f[1] + '" data-base="' + c[2] + '"' + (c[3] ? ' data-spot="' + c[3] + '"' : '') + '></canvas><figcaption><b>' + c[0] + '</b>' + c[1] + '</figcaption></figure>';
+      }).join("") + '</div></div>';
+  }).join("");
+</script>
+<script src="../js/granules.js"></script>
+</body>
+</html>
